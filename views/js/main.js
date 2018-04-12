@@ -83,7 +83,7 @@ var resizePizzas = function(size) {
 
   changePizzaSizes(size);
 
-  // User Timing API is awesome
+  // User Timing API
   window.performance.mark("mark_end_resize");
   window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
   var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
@@ -223,12 +223,12 @@ document.addEventListener('DOMContentLoaded', window.requestAnimationFrame(funct
 	  }
 
 
-  // items variable moved here to make it accessible globally
+  // moved items variable here to make it globally accessible
   window.items = document.getElementsByClassName("mover");
   window.requestAnimationFrame(updatePositions);
 
   /*
-	I reviewed https://github.com/JordanFriesen/udacity-optimization-project/blob/gh-pages/views/js/main.js for more information on how to use requestAnimationFrame - the lectures available on Udacity were not the best, however, this lack of practical implementation made this project the most rewarding.
+	referenced https://github.com/JordanFriesen/udacity-optimization-project/blob/gh-pages/views/js/main.js for help
   */
 
 }));
