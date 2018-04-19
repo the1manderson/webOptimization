@@ -141,7 +141,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
   for (var i = numberOfEntries - 1; i > numberOfEntries - 11; i--) {
     sum = sum + times[i].duration;
   }
-  console.log("Average scripting time to generate last 10 frames: " + sum / 10 + "ms");
+  console.log("Average scripting time to generate last 60 frames: " + sum / 60 + "ms");
 }
 
 // implemented requestAnimationFrame as seen on http://www.html5rocks.com/en/tutorials/speed/animations/
@@ -201,34 +201,34 @@ window.addEventListener('scroll', onScroll, false);
 var masterPizzaContainer = document.getElementById("movingPizzas1");
 
 // Generates the sliding pizzas when the page loads.
-// document.addEventListener('DOMContentLoaded', window.requestAnimationFrame(function() {
-// 	var s = 256;
-// 	var h = screen.height;
-// 	var cols = 8;
-// 	//adding rows to dynamically recalculate the needed amount based on screen height at load time.
-// 	var rows = Math.floor(h / s);
-// 	var l = cols * rows;
-// 	var elem = '';
-// 	  //moved image element var to outside of loop
-// 	for (var i = 0; i <= l; i++) {
-// 		elem = document.createElement("img");
-// 		elem.className = 'mover';
-// 		elem.src = "images/pizza.png";
-// 		elem.style.height = "100px";
-// 		elem.style.width = "73.333px";
-// 		elem.basicLeft = (i % cols) * s;
-// 		elem.style.top = (Math.floor(i / cols) * s) + 'px';
-// 		masterPizzaContainer.appendChild(elem);
-// 		console.log(elem);
-// 	  }
-
-
-  // moved items variable here to make it globally accessible
+document.addEventListener('DOMContentLoaded', window.requestAnimationFrame(function() {
+	var s = 256;
+	var h = screen.height;
+	var cols = 8;
+	//adding rows to dynamically recalculate the needed amount based on screen height at load time.
+	var rows = Math.floor(h / s);
+	var l = cols * rows;
+	var elem = '';
+	  //moved image element var to outside of loop
+	for (var i = 0; i <= l; i++) {
+		elem = document.createElement("img");
+		elem.className = 'mover';
+		elem.src = "images/pizza.png";
+		elem.style.height = "100px";
+		elem.style.width = "73.333px";
+		elem.basicLeft = (i % cols) * s;
+		elem.style.top = (Math.floor(i / cols) * s) + 'px';
+		masterPizzaContainer.appendChild(elem);
+		console.log(elem);
+	  })
+  
+  
+  // items variable moved here to make it accessible globally
   window.items = document.getElementsByClassName("mover");
   window.requestAnimationFrame(updatePositions);
-
+  
   /*
-	referenced https://github.com/JordanFriesen/udacity-optimization-project/blob/gh-pages/views/js/main.js for help
+	I reviewed https://github.com/JordanFriesen/udacity-optimization-project/blob/gh-pages/views/js/main.js for more information on how to use requestAnimationFrame - the lectures available on Udacity were not the best, however, this lack of practical implementation made this project the most rewarding.
   */
-
-));
+  
+}));
