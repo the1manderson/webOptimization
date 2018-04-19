@@ -231,4 +231,4 @@ var masterPizzaContainer = document.getElementById("movingPizzas1");
 	referenced https://github.com/JordanFriesen/udacity-optimization-project/blob/gh-pages/views/js/main.js for help
   */
 
-}));
+});
