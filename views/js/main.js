@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', window.requestAnimationFrame(funct
 		elem.style.top = (Math.floor(i / cols) * s) + 'px';
 		masterPizzaContainer.appendChild(elem);
 		console.log(elem);
-	  })
+	  }
   
   
   // items variable moved here to make it accessible globally
@@ -231,4 +231,4 @@ document.addEventListener('DOMContentLoaded', window.requestAnimationFrame(funct
 	I reviewed https://github.com/JordanFriesen/udacity-optimization-project/blob/gh-pages/views/js/main.js for more information on how to use requestAnimationFrame - the lectures available on Udacity were not the best, however, this lack of practical implementation made this project the most rewarding.
   */
   
-}));
+));
