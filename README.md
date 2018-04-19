@@ -6,8 +6,6 @@ To test Pagespeed, use Chrome Canary and browse to https://developers.google.com
 Then enter https://the1manderson.github.io/webOptimization into the "Enter URL" field
 
 
-
-
 Enhancements made to improve performance:
 Inlined style.css
 Change pic height to 75px
@@ -16,10 +14,15 @@ Moved js to end of body
 converted profilepic.jpg to profilepic.png
 compressed Pizzeria jpg by 75%
 removed Google web fonts
-Add media="print" to print.css link
+corrected Https error on google analytics link
 
 Pizza:
 replaced any querySelectors with getElementById or getElementsByClassName
 moved declarations outside of loops
 put pizza html creation logic to WebWorker
+
+
+References:(In addition to inital builds and forums by udacity staff and fellow rookies)
+Sliding background pizzas was pulled from : https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
+Sructure based on work by Aleksandar Petrovic
 
