@@ -23,6 +23,6 @@ put pizza html creation logic to WebWorker
 
 
 References:(In addition to inital builds and forums by udacity staff and fellow rookies)
-Sliding background pizzas was pulled from : https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
-Sructure based on work by Aleksandar Petrovic
+Sliding background pizza code credited to Ilya Grigorik, was pulled from: https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
+html and worker Sructures based on work by Aleksandar Petrovic
 
