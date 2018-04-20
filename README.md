@@ -5,6 +5,8 @@ https://the1manderson.github.io/webOptimization
 To test Pagespeed, use Chrome Canary and browse to https://developers.google.com/speed/pagespeed/insights/
 Then enter https://the1manderson.github.io/webOptimization into the "Enter URL" field
 
+Note: this file must be rendered from localhost or github pages. Due to pizza-worker. If you run pizza.html from drive, you will get an error in Chrome only. It renders correctly in IE and Firefox. Refer to https://stackoverflow.com/questions/21408510/chrome-cant-load-web-worker for more information on chrome cant load worker.
+
 
 Enhancements made to improve performance:
 Inlined style.css
